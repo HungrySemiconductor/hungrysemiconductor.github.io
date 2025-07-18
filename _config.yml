@@ -38,11 +38,11 @@ social:
   email: fhongle@163.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/HungryPi # change to your Twitter homepage
     - https://github.com/HungrySemiconductor # change to your GitHub homepage
-    - https://blog.csdn.net/Taylor_Kurt?spm=1011.2435.3001.5343 # change to your CSDN homepage
     # Uncomment below to add more social links
     # - https://www.linkedin.com/in/username
+    # - https://twitter.com/HungryPi # change to your Twitter homepage
+    # - https://blog.csdn.net/Taylor_Kurt?spm=1011.2435.3001.5343 # change to your CSDN homepage
 
 # Site Verification Settings
 webmaster_verifications:
