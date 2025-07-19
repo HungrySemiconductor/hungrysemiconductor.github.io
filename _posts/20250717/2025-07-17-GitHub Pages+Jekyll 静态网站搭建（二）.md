@@ -3,6 +3,7 @@ data: 2025-07-17
 categories: [网站搭建]
 tags: [GitHub Pages, jekyll]
 description: 本文介绍了Jekyll主题的下载与使用
+comments: true
 ---
 
 # 静态网站搭建（二）
@@ -18,7 +19,7 @@ description: 本文介绍了Jekyll主题的下载与使用
 
 ## 搭建模板
 1. **创建自己的仓库**
-<br>作者给出了该项目的模板，直接进入仓库，点击`use this template`创建自己的仓库，以`<username>.github.io`命名即可
+<br>作者给出了该项目的模板，直接进入仓库，点击<kbd>Use this template</kbd>创建自己的仓库，以`<username>.github.io`命名即可
 2. **克隆项目到本地**
 <br>使用`bundle install`安装`Gemfile`中的`Ruby`依赖
 3. **浏览个人网页**
@@ -33,7 +34,7 @@ description: 本文介绍了Jekyll主题的下载与使用
 2. **额外配置**
 <br>如果本地计算机未运行Linux，还需要使用`$ bundle lock --add-platform x86_64-linux`更新锁定文件(Gemfile.locak)的平台列表
 3. **开启`GitHub Actions`**
-<br>进入`GitHub`中该项目的仓库，从上边栏打开`setting`页面，从侧边栏打开`Pages`页面，`Build and deployment`的`source`处选择`GitHub Action`
+<br>进入`GitHub`中该项目的仓库，从上边栏打开`setting`页面，从侧边栏打开`Pages`页面，`Build and deployment`的`source`处选择<kbd>GitHub Action</kbd>
 4. **运行网页**
 <br>在本地提交、推送一次，即可使用专属URL`https://<username>.github.io`打开自己了的网页了！
 

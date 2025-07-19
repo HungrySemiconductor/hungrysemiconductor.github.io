@@ -3,6 +3,7 @@ data: 2025-07-17
 categories: [网站搭建]
 tags: [GitHub Pages, jekyll]
 description: 本文介绍了使用GitHub Pages+Jekyll创建个人静态网站的步骤
+comments: true
 ---
 
 # 静态网站搭建（一）

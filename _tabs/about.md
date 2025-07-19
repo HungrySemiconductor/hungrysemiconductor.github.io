@@ -6,9 +6,9 @@ order: 4
 
 
 
-```
+```console
 $ whoami
-Hongle_Fan		# I also use names Hugry_Semiconductor | Hungry_Pi online
+Hongle_Fan		# I also use names Hungry_Semiconductor | Hungry_Pi online
 
 $ echo $LOCATION
 Beijing, China		# 40.4042°N, 116.6074°E
@@ -31,7 +31,7 @@ lrwxrwxrwx 1 root rooy  512 Dec 2024 Git -> Version_Control
 -rw-r--r-- 1 root root  256 Jul 2025 Linux Shell 
 
 $ cat ~/Hobbies.txt
-1. Reading (Sci-fi, biography)
+1. Reading (Sci-fic, biography)
 2. Running && Hiking	# wanna travel to the edge of the world/universe
 3. Daydreaming && Mental Wandering
 4. ...
@@ -41,7 +41,6 @@ Version: 1.0		# Thanks to Chirpy Theme provided by cotes2020
 Last Update: Jul 2025	# Still growing
 
 ```
-
 
 
 
