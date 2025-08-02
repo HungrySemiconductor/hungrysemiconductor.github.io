@@ -31,7 +31,7 @@ lrwxrwxrwx 1 root root  512 Dec 2024 Git -> Version_Control
 -rw-r--r-- 1 root root  256 Jul 2025 Linux Shell 
 
 $ cat ~/Hobbies.txt
-1. Reading (Sci-fic, biography)
+1. Reading (Sci-fi, biography)
 2. Running && Hiking	# wanna travel to the edge of the world/universe
 3. Daydreaming && Mental Wandering
 4. ...
