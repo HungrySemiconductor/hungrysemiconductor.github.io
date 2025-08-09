@@ -26,7 +26,7 @@ comments: true
    <br>使用`bundle exec jekyll serve`，获取到本地服务器 http://locoalhost:4000，即可在网页上浏览
 
 > 模板链接：[cotes2020/chirpy-starter: A website startup template using the Chirpy theme gem.](https://github.com/cotes2020/chirpy-starter)
-> {: .prompt-info }
+{: .prompt-info }
 
 ## 网站部署
 
@@ -40,7 +40,7 @@ comments: true
    <br>在本地提交、推送一次，即可使用专属 URL`https://<username>.github.io`打开自己了的网页了！
 
 > 操作文档：[Chirpy-Getting Stared](https://chirpy.cotes.page/posts/getting-started/)
-> {: .prompt-info}
+{: .prompt-info}
 
 > 使用`GitHub Actions`自动部署后，在本地的修改需要通过`bundle exec jekyll serve --livereload`才能启动实时预览
-> {: .prompt-warning}
+{: .prompt-warning}

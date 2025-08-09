@@ -45,7 +45,7 @@ comments: true
 _Jekyll 生成的静态页面_
 
 > 上述过程最好全程开代理，且 new 操作一般会有较长等待时间，本文 Jekyll 新建 myblog 时安装了 41 个 gems
-> {: .prompt-tip }
+{: .prompt-tip }
 
 [^foot1]: [GitHub Pages](https://pages.github.com/)
 [^foot2]: [Win 安装 Ruby+Jekyll 视频教程](https://www.bilibili.com/video/BV1qs41157ZZ?spm_id_from=333.788.player.switch&vd_source=dd2b7c41f54e83182372ee62c303b855&p=3)

@@ -1,11 +1,253 @@
 ---
-title: Linux文件与权限管理（二）
-data: 2025-07-16
+title: Linux Commands
+data: 2025-07-20
 categories: [网络工程]
-description: 偶然发现了Labex网站，觉得很有意思，全英文初步学习了linux操作。本文主要内容为针对文件/文件夹、用户权限的基本命令
+description: 针对文件与用户管理的Linux命令集合
 tag: [Linux]
 comments: true
 ---
+
+# Linux 快速入门
+
+## 参考资料
+
+> Linux 是一个强大且开源的操作系统，本文使用 LabEx[^foot1]学习和练习 Linux 操作，目标是获得管理 Linux 操作系统和自动化任务的实际经验。
+>
+> `man <命令语句>`：对该命令的详细使用说明
+
+## 注意点
+
+> - Linux 命令大小写敏感
+>
+> - 注意空格
+
+## 基础命令
+
+- `echo`：重复语句
+
+### 权限管理
+
+- `whoami`：返回`username`，用于在不同机器或使用不同用户工作时查看用户名
+- `id`：查看当前用户在哪个`groups`，`groups`决定了用户的权限和访问权
+
+- `id root`：查看超级管理员，即系统的管理者
+
+---
+
+### 安装软件
+
+- `sudo`：`SuperUser Do`，暂时使用超级管理员身份执行操命令
+- `apt`：包裹管理工具，相当于手机上的应用商店
+- `install` ：安装程序
+
+> 先更新，再安装
+>
+> `sudo apt update`
+>
+> `sudo apt install xxx`
+
+---
+
+### 文件操作基础
+
+> Linux 中几乎所有内容都被视为文件，所以操作文件是使用系统的基础
+>
+> **主目录**：`home directory`，一般表示为`~`
+
+- `pwd`：`print working directory`，显示当前文件路径，在 Linux 文件结构中确定方向
+- `echo ~`：显示`home directory`的路径
+- `ls`：显示当前文件夹内的目录，`ls`表示`list`
+- `ls ~`：显示`home directory`内的目录，`~`是主目录的一种快捷方式
+- `ls -l`：显示详细文件目录信息，`l`表示`long format`
+- `ls -a`：显示包含隐藏文件的目录，`a`表示`all`
+- `ls -la`：显示所有文件目录的详细信息
+- `ls -l 文件夹名`：显示该文件夹下的文件目录
+- `ls -lR 文件夹名`：显示该文件夹下的所有文件和子文件夹中的内容，`R`表示`recursive`递归地
+- `ls -ld 文件夹名`：显示文件夹本身的信息，`-d`表示仅仅列出文件夹自己
+
+> Linux 使用的是一种`hierarchical - file system`，类似于一个有许多分支的大树 🌳
+>
+> **主干**：`root directory`，一般表示为`/`
+
+- `cd 绝对路径`：移动到指定路径，`cd`表示`change directory`
+- `cd ..` ：移动到上一个文件夹，`..`表示`the directory above`
+
+> 创建文件和文件夹的几种方式
+
+- `touch 文件名`：创建一个新的空文件，如果同名文件已经存在，则更新文件的时间戳而不改变其内容
+- `echo "Hello, Linux" > file.txt`：创建一个带有内容的文件，如果同名文件已经存在，则更换其内容
+- `echo "Hidden file" > .hiddenfile`：创建了一个隐藏文件，Linux 中任何一个文件或文件夹命名从点开始，则为隐藏文件
+- `mkdir 文件夹名称`：创建一个新文件夹
+- `mkdir -p 父文件夹/子文件夹`：`-p`表示在必要时创建父文件夹；如果缺少`-p`，当父文件夹不存在时，创建语句失败
+
+> 复制文件和文件夹
+
+- `cp 文件1 文件1_copy`：复制文件 1 到当前目录，并命名为文件 1_copy
+- `cp 文件1 指定文件夹`：复制文件 1 到指定文件夹中
+- `cp -r 文件夹1 文件夹1_copy`：复制文件夹到当前文件夹中，`r`表示`recursive`，为保证该文件夹下所有内容都被复制了。**如果文件夹 1_copy 存在，则该命令将复制文件夹 1 到文件夹 1_copy 目录中；如果文件夹 1_copy 不存在，则该命令将复制文件夹 1 到当前文件夹中并重命名为文件夹 1_copy**
+
+> 移动和重命名文件和文件夹
+
+- `mv 文件1 文件2`：重命名文件 1，更换为文件 2
+- `mv 文件1 文件夹1`：将文件 1 移动到文件夹 1 中
+- `mv 文件夹1 文件夹2`：重命名文件夹 1，更换为文件夹 2
+- `mv 文件夹1/文件1 ./文件2`：将文件 1 从文件夹 1 中移动到当前文件夹，并重命名为文件 2
+
+> 移除文件和文件夹，没有回收站所以`rm`命令删除的内容通常是永久性的，在执行命令前，请务必仔细检查！
+
+- `rm 文件名`：直接删除
+- `rm -i 文件名`：在删除前进行确认
+- `rmdir 文件夹名`：只在文件夹为空的时候执行
+- `rm -r 文件夹名`：可以删除不为空的文件夹
+- `rm -rf 文件夹名`：强制执行删除命令，没有任何提示
+
+---
+
+### 输出文件内容
+
+> 下文中将“文件路径”默认写作<path>
+
+- `cat <path>`：打开文件内容
+- `cat -n <path>`：输出带有行数字标识的内容，`n`表示`number`
+- `head <path>`：默认输出文件前 10 行内容
+- `head -n1 <path>`：输出文件前一行内容，`n2`表示输出前两行，...
+- `head -c1 <path>`：输出文件前一个字节，`c`表示`character`，文件中 1 个字母为 1 个字节
+- `tail <path>`：默认输出文件后 10 行内容
+- `tail -n1 <path>`：输出文件后一行内容
+- `tail -c1 <path>`：输出文件后一个字节，通常为空，因 i 最后一个字节可能是不可见的换行符
+
+---
+
+### 对比文件/文件夹
+
+- `diff 文件1 文件2`：对比文件内容
+- `diff -r 文件夹1 文件夹2`：对比文件夹内容，`r`表示`recursively`递归地将子文件夹进行比较
+
+---
+
+### Linux 中的权限
+
+> 权限对于管理访问 Linux 系统上的文件和文件夹非常重要，包括对文件的读、写操作
+
+> 查看文件的详细信息时（`ls -l 文件名`）
+>
+> `-rw-rw-r-- 1 labex labex 0 Jul 29 15:11 example.txt`
+>
+> - `-rw-rw-r--` ：`-`表示`普通文件`，`d`表示`文件夹`，`rwx`表示`read/write/execute`，分别表示对`owner/group/others`的权限
+> - 数字`1`：硬链接数，对于`file`通常为 1，对于`directory`可能为别的数值
+> - 第一个`labex`：该文件当前的 onwner 的`username`
+> - 第二个`labex`：该文件当前的`group`，表示可以一起共享权限的集体
+> - `0`：文件字节数
+> - `Jul 29 15:11`：最后修改的时间
+> - `example.txt` ：文件名
+
+> `sudo`使用 root 权限运行命令，可能需要输入密码
+
+- `chown <owner名称>:<group名称> <文件名称>`：同时修改文件的`user`和`group`，即`change ownership`
+
+- `chown -R <owner名称>:<group名称> <文件夹名称>`：修改文件夹中的`user`和`group`，即`change
+
+- `chmod <数字记号> <文件名称>`：更改文件/文件夹的权限，即`change mode`
+
+  > 数字记号 numeric notation 的种类：
+  >
+  > 4：read
+  >
+  > 2：write
+  >
+  > 1：exectue
+  >
+  > 0：no permission
+  >
+  > - 例如数字记号`700`指的是 `-rwx------ `各自的累加
+  >
+  > owner：4r+2w+1e=7
+  >
+  > group：0r+0w+0e=0
+  >
+  > other：0r+0w+0e=0
+
+  > 符号记号 symbolic notation 的种类：
+  >
+  > u：user（owner）
+  >
+  > g：group
+  >
+  > o：other
+  >
+  > a：all
+  >
+  > +：增加一个权限
+  >
+  > -：移除一个权限
+  >
+  > `r-read；w-write；x-execute`
+  >
+  > - 例如`chomod u+x 文件名称`指的是`为onwer增加一个执行权限`
+
+---
+
+### 修改用户信息
+
+- `sudo useradd <用户名>`：添加一个新用户
+
+- `sudo useradd -m <用户名>`：创建一个以用户名命名的 HomeDirectory，类似一个私有文件夹存储文件和设置
+
+- `sudo grep -w '<用户名>' /etc/passwd`：显示一行用户名相关信息，用冒号隔开
+- `sudo ls -ld </home/用户名 即homeDirectory>`：仅查看 homeDirectory 文件夹本身的信息
+
+> 例如：`joker:x:5001:5001::/home/joker:/bin/sh`
+>
+> 用户名：joker
+>
+> 密码：x（通常存在别处）
+>
+> user ID：5001
+>
+> group ID：5001
+>
+> HomeDirectory：`/home/joker`（当使用-m 时创建）
+>
+> DefualtShell：`/bin/sh`
+
+- `sudo passwd <用户名>`：更改用户密码，需要输入两次
+- `sudo passwd -S <用户名>`：查看用户密码状态
+- `sudo usermod -d <新的HomeDirectory> <用户名>`：修改 homeDirectory
+
+> Linux 在后台将加密的密码存储在`/etc/shadow`中，而不是在每个人都可以找到的`/etc/passwd`中
+
+> Linux 中可以修改的用户默认 shell，shell 是解释并运行你在终端输入的命令的程序。
+
+- `sudo usermod -s /bin/bash <用户名>`：更改用户的 shell，从默认的 sh（Bourne Shell）变为 bash（Bourne Again Shell），使得命令语句更丰富
+
+> 将新建的用户加入 sudo group，使得该用户可以使用 sudo 的权限，便于软件安装，配置修改和用户管理，仅仅输入该用户的密码就可以在不泄露 root 密码的时候使用部分权限，sudo 会记录谁运行了什么命令，提高安全性和可追踪性
+
+- `sudo usermod -aG sudo <用户名>`：将用户添加到 sudo 的 group 中，`-aG`表示`append to group`
+- `groups <用户名>`：列出包含该用户的所有 group
+- `su - <用户名>`：将用户改为<用户名>的用户，需要输入创建该用户时设置的密码（当用户被禁用时无法更换）
+- `sudo cat /etc/shadow`：可以作为切换用户后，检查权限是否提高的语句（原先为仅在 root 用户下才能执行的语句，查看完使用`exit`退出）
+- `sudo passwd -l <用户名>`：暂时禁用该用户，`-l`表示`lock`
+- `sudo passwd -u <用户名>`：解锁用户
+- `sudo userdel <用户名>`：仅删除用户名，保留其 HomeDirectory
+- `sudo userdel -r <用户名>`：删除用户及其 HomeDirectory，`del`表示`delete`，`-r`表示`remove`
+
+## htop 工具
+
+> 实时查看电脑运行状态，类似于仪表盘
+>
+> 顶部：CPU 和内存使用，电脑运行时常
+>
+> 中间：正在运行的程序，进程
+>
+> 底部：htop 中可操作的选项
+
+- 先安装 htop 后，使用`htop`打开
+
+- 使用`q`退出
+
+![Desktop View](/img/2025-07-17/image02.png)
+
+[^foot1]: [Linux Skill Tree Learning Path \| LabEx](https://labex.io/skilltrees/linux)
 
 ## 1 使用 Vim 和 Nano 编辑文件
 
@@ -134,6 +376,7 @@ shift+两次z：保存文件并退出编辑器
 ## 3 输入输出重定向
 
 > 通过操作三个标准流，控制命令数据的流向，实现保存命令输出/管理错误信息/从文件获取输入
+>
 > **standard output(stdout)**
 >
 > **standard error(stderr)**
@@ -142,7 +385,7 @@ shift+两次z：保存文件并退出编辑器
 
 ### 3.1 重定向 stdout 命令
 
-> 在 Linux 中，大多数名都会生成一些输出，默认为 stdout，显示在终端
+> 在 Linux 中，大多数命令都会生成一些输出，默认为 stdout，显示在终端
 >
 > 也可以对一个文件使用`>`或者`>>`重定向这些输出，**用于保存命令结果/创建日志文件/生成报告**
 
