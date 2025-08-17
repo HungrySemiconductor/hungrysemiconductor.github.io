@@ -6,10 +6,10 @@
 - type: twitter
   icon: "fa-brands fa-x-twitter"
 
-- type: code
-  icon: "fa-solid fa-code"
-  noblank: true
-  url: 'https://gitee.com/hungry-semiconductor'
+# - type: code
+#   icon: "fa-solid fa-code"
+#   noblank: true
+#   url: 'https://gitee.com/hungry-semiconductor'
   
 - type: email
   icon: "fas fa-envelope"

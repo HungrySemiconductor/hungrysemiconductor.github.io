@@ -207,7 +207,7 @@ _上层数据单元被封装为下层有效负载_
 
 ## 4 互连网
    
-> Internetwork：通过路由器连接在一起的网络集合是一个互连网（Internet），其中最著名的是因特网（internet）
+> Internetwork：通过路由器连接在一起的网络集合是一个互连网（internet），其中最著名的是因特网（Internet）
 
 互联网历史
 如何演变
