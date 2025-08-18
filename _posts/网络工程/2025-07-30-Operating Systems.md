@@ -16,7 +16,7 @@ comments: true
 
 #### 1.1.1 查看目录
 
-> Windows 使用反斜杠 `\`  
+> Windows 使用反斜杠 `\` 表示文件路径分隔符，使用 `/` 表示命令行参数前缀
 > Linux 使用正斜杠 `/`
 
 ```shell
@@ -237,15 +237,82 @@ comments: true
 
 ### 2.2 权限和访问控制
 
-#### 2.2.1 文件权限
+> 权限是计算机安全的重要组成部分
+
+#### 2.2.1 查看权限
+
+> Windows:  
+> Access Control Lists(ACLs)：自主访问控制列表，分配文件和目录权限
+
+```shell
+====== Windows ======
+- icacls Desktop     # 查看当前用户的权限，improved change ACLs
+- icacls /?          # 查看icacls命令的帮助文档
+
+====== Linux ======
+- ls -l <folder/filename>  # 查看当前用户对文件或目录的权限
+```
 
 #### 2.2.2 修改权限
+
+```shell
+====== Windows ======
+- icacls 'path' /grant 'groupname:(perimission such as CI/OI/R/W/X/F...)(...)'   # 添加指定群组权限
+- icacls 'path' /remove 'groupname:(perimission such as CI/OI/R/W/X/F...)(...)'  # 移除指定群组权限
+
+====== Linux ======
+- chmod u+rwx <folder/filename>    # 为该文件的'用户'添加'读、写、执行'功能
+- chmod u-rwx <folder/filename>    # 为该文件的'用户'移除'读、写、执行'功能
+- chmod g+rw  <folder/filename>    # 为该文件的'群组'添加'读、写'功能
+- chmod o+r   <folder/filename>    # 为该文件的'其他用户'添加'读'功能
+- chmod ugo+x <folder/filename>    # 为该文件的'用户、群组、其他用户'添加'执行'功能
+- chmod 754 <folder/filename>      # r-5,w-4,x-1；为该文件的不同用户一次性添加不同权限
+
+- sudo chown <username> <folder/filename>   # 更改文件所属用户
+- sudo chgrp <groupname> <folder/filename>  # 更改文件所属群组
+```
+
+#### 2.2.3 特殊权限
+
+> 在 Linux 和 Windows 系统中，除了基本的读（R）、写（W）、执行（X）权限外，还有一些特殊权限用于更精细的访问控制
+
+```shell
+====== Windows ======
+1. 完全控制（Full Control）：允许所有操作（包括修改权限）。
+2. 遍历文件夹/执行文件（Traverse Folder / Execute File）：允许进入目录或运行程序。
+3. 读取权限（Read Permissions）：仅查看权限，不能修改。
+4. 更改权限（Change Permissions）：可以修改 ACL。
+5. 取得所有权（Take Ownership）：可以夺取文件所有权（类似 Linux 的 chown）。
+6. 特殊权限（Special Permissions）：更细粒度的控制（如仅允许删除子文件）。
+
+====== Linux ======
+1. SetUID(SUID)：文件设置了该权限时，执行该程序的用户会临时获得文件所有者的权限（通常是root）
+2. SetGID(SGID)：类似SUID，针对组
+3. Sticky Bit：文件设置了该权限时，仅允许文件所有者mv/rm自己的文件
+
+- chmod u+s /path/to/file   # 设置SUID
+- chmod 4755 /path/to/file  # 4表示SUID，755仅为示例
+
+- chmod g+s /path/to/file   # 设置SGID
+- chmod 2755 /path/to/file  # 2表示SGID，755仅为示例
+
+- chmod +t /path/to/file   # 设置Sticky Bit
+- chmod 1755 /path/to/file  # 1表示Sticky Bit，755仅为示例
+```
 
 ## 3 软件包和软件管理
 
 ### 3.1 软件包
 
 #### 3.1.1 软件包
+
+```shell
+====== Linux ======
+- sudo dpkg -i <xxx.deb> # 安装Debian版本软件
+- sudo dpkg rm <xxx>     # 删除安装包
+- dpkg -l                # 列出所有安装包
+- dpkg -l | grep <xxx>   # 搜索指定安装包，使用pipe将前者的输出作为后者的输入
+```
 
 #### 3.1.2 存档
 
