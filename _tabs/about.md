@@ -6,6 +6,8 @@ order: 5
 
 
 
+[![Last Commit](https://img.shields.io/github/last-commit/hungrysemiconductor/hungrysemiconductor.github.io)](https://github.com/hungrysemiconductor/hungrysemiconductor.github.io/commits){: .normal .w-75 }
+
 ```console
 $ whoami
 Hongle_Fan		# I also use names Hungry_Semiconductor | Hungry_Pi online
