@@ -308,15 +308,43 @@ comments: true
 
 ```shell
 ====== Linux ======
-- sudo dpkg -i <xxx.deb> # 安装Debian版本软件
-- sudo dpkg rm <xxx>     # 删除安装包
+- sudo dpkg -install <packagename>    # 安装
+- sudo dpkg -remove <packagename>     # 删除
 - dpkg -l                # 列出所有安装包
 - dpkg -l | grep <xxx>   # 搜索指定安装包，使用pipe将前者的输出作为后者的输入
 ```
 
 #### 3.1.2 存档
 
+```shell
+====== Windows ======
+- Compress-Archive -Path <folder-to-compress> -DestinationPath <archive-name>.zip  # 压缩文件夹
+- Expand-Archive -Path <archive-name>.zip -DestinationPath <extract-to-folder>    # 解压文件夹
+
+====== Linux ======
+- tar -czvf <archive-name>.tar <Path and folder-to-compress>  # 压缩文件夹
+- tar -xzvf <archive-name>.tar -C <Path> # 解压文件夹到指定位置Path
+```
+
 #### 3.1.3 包依赖项
+
+- DLL，Dynamic Link Library，动态链接库（共享库）
+
+  > 是一种在 Windows 和 Linux 等操作系统中使用的软件组件，它允许多个程序共享相同的代码和数据，从而减少内存占用和提高系统性能
+
+- Windows
+
+  > 安装软件时，会自动安装其依赖项
+
+  - MSI File， Microsoft installer package
+
+    > 是一种 Windows 安装程序文件，用于安装和配置软件。它包含了软件的安装程序、配置文件、组件和依赖项包括 DLL 等信息
+
+  - SXS，Side-by-Side，侧载
+    > 是一种 Windows 组件模型，它允许在同一台计算机上安装多个版本的相同软件组件（共享库），而不会相互干扰。存储位置为 C:\Windows\WinSxS
+
+- Linux
+  > 安装独立包时，不会自动安装其依赖项，要么根据提示手动依次安装依赖项，要么使用包管理器
 
 ### 3.2 包管理器
 
