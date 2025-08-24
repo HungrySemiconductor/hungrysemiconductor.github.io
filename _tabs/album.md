@@ -185,47 +185,71 @@ order: 4
 
 <div class="album-grid">
   <div class="album-item">
-    <img src="./album/changsha/images (1).jpg" alt="Photo 1">
+    <img src="./album/Urumqi/images (1).jpg" alt="Photo 1">
+    <div class="album-caption">乌鲁木齐-中瑞国际大厦</div>
+  </div>
+  <div class="album-item">
+    <img src="./album/Urumqi/images (2).jpg" alt="Photo 2">
+    <div class="album-caption">乌鲁木齐-中天广场</div>
+  </div>
+  <div class="album-item">
+    <img src="./album/Urumqi/images (3).jpg" alt="Photo 3">
+    <div class="album-caption">乌鲁木齐-西河街</div>
+  </div>
+  <div class="album-item">
+    <img src="./album/Urumqi/images (4).jpg" alt="Photo 4">
+    <div class="album-caption">乌鲁木齐-二道桥</div>
+  </div>
+  <div class="album-item">
+    <img src="./album/Urumqi/images (5).jpg" alt="Photo 5">
+    <div class="album-caption">乌鲁木齐-二道桥清真寺</div>
+  </div>
+  <div class="album-item">
+    <img src="./album/Urumqi/images (6).jpg" alt="Photo 6">
+    <div class="album-caption">乌鲁木齐-国际大巴扎馕文化馆</div>
+  </div>
+  <div class="album-item">
+    <img src="./album/changsha/images (1).jpg" alt="Photo 7">
     <div class="album-caption">长沙-五一广场</div>
   </div>
   <div class="album-item">
-    <img src="./album/changsha/images (2).jpg" alt="Photo 2">
+    <img src="./album/changsha/images (2).jpg" alt="Photo 8">
     <div class="album-caption">长沙-橘子洲头</div>
   </div>
   <div class="album-item">
-    <img src="./album/datong/images (1).jpg" alt="Photo 32">
+    <img src="./album/datong/images (1).jpg" alt="Photo 9">
     <div class="album-caption">大同-云冈石窟</div>
   </div>
   <div class="album-item">
-    <img src="./album/datong/images (2).jpg" alt="Photo 3">
+    <img src="./album/datong/images (2).jpg" alt="Photo 10">
     <div class="album-caption">大同-云冈石窟-露天大佛</div>
   </div>
   <div class="album-item">
-    <img src="./album/tianjin/images (1).jpg" alt="Photo 4">
+    <img src="./album/tianjin/images (1).jpg" alt="Photo 11">
     <div class="album-caption">天津站</div>
   </div>
   <div class="album-item">
-    <img src="./album/tianjin/images (2).jpg" alt="Photo 5">
+    <img src="./album/tianjin/images (2).jpg" alt="Photo 12">
     <div class="album-caption">天津-世纪钟</div>
   </div>
   <div class="album-item">
-    <img src="./album/tianjin/images (3).jpg" alt="Photo 6">
+    <img src="./album/tianjin/images (3).jpg" alt="Photo 13">
     <div class="album-caption">天津-瓷房子</div>
   </div>
   <div class="album-item">
-    <img src="./album/tianjin/images (4).jpg" alt="Photo 7">
+    <img src="./album/tianjin/images (4).jpg" alt="Photo 14">
     <div class="album-caption">天津-民园广场</div>
   </div>
   <div class="album-item">
-    <img src="./album/weihai/images (1).jpg" alt="Photo 8">
+    <img src="./album/weihai/images (1).jpg" alt="Photo 15">
     <div class="album-caption">威海</div>
   </div>
   <div class="album-item">
-    <img src="./album/weihai/images (2).jpg" alt="Photo 9">
+    <img src="./album/weihai/images (2).jpg" alt="Photo 16">
     <div class="album-caption">威海</div>
   </div>
   <div class="album-item">
-    <img src="./album/weihai/images (3).jpg" alt="Photo 28">
+    <img src="./album/weihai/images (3).jpg" alt="Photo 17">
     <div class="album-caption">威海-哈工大图书馆</div>
 </div>
 
