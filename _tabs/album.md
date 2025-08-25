@@ -185,27 +185,27 @@ order: 4
 
 <div class="album-grid">
   <div class="album-item">
-    <img src="./album/Urumqi/images (1).jpg" alt="Photo 1">
+    <img src="https://raw.githubusercontent.com/HungrySemiconductor/Pic/update/Urumqi%20(1).jpg"/>
     <div class="album-caption">乌鲁木齐-中瑞国际大厦</div>
   </div>
   <div class="album-item">
-    <img src="./album/Urumqi/images (2).jpg" alt="Photo 2">
+    <img src="https://raw.githubusercontent.com/HungrySemiconductor/Pic/update/Urumqi%20(2).jpg"/>
     <div class="album-caption">乌鲁木齐-中天广场</div>
   </div>
   <div class="album-item">
-    <img src="./album/Urumqi/images (3).jpg" alt="Photo 3">
+    <img src="https://raw.githubusercontent.com/HungrySemiconductor/Pic/update/Urumqi%20(3).jpg"/>
     <div class="album-caption">乌鲁木齐-西河街</div>
   </div>
   <div class="album-item">
-    <img src="./album/Urumqi/images (4).jpg" alt="Photo 4">
+    <img src="https://raw.githubusercontent.com/HungrySemiconductor/Pic/update/Urumqi%20(4).jpg"/>
     <div class="album-caption">乌鲁木齐-二道桥</div>
   </div>
   <div class="album-item">
-    <img src="./album/Urumqi/images (5).jpg" alt="Photo 5">
+    <img src="https://raw.githubusercontent.com/HungrySemiconductor/Pic/update/Urumqi%20(5).jpg"/>
     <div class="album-caption">乌鲁木齐-二道桥清真寺</div>
   </div>
   <div class="album-item">
-    <img src="./album/Urumqi/images (6).jpg" alt="Photo 6">
+    <img src="https://raw.githubusercontent.com/HungrySemiconductor/Pic/update/Urumqi%20(6).jpg"/>
     <div class="album-caption">乌鲁木齐-国际大巴扎馕文化馆</div>
   </div>
   <div class="album-item">
