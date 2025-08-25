@@ -16,7 +16,7 @@ $ echo $LOCATION
 Beijing, China		# 40.4042°N, 116.6074°E
 
 $ cat /proc/$(whoami)/education
-    Status:  Graduate Student
+    Status:  Postgraduate Student
 University:  University of Chinese Academy of Sciences
      Major:  Electronic and Information Engineering
   Research:  Spatical Data Processing and Transmission
