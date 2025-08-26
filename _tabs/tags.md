@@ -3,5 +3,4 @@ layout: tags
 icon: fas fa-tags
 order: 3
 hidden: true	
-permalink: /blog/tags/
 ---
