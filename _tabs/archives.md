@@ -1,5 +1,7 @@
 ---
 layout: archives
 icon: fas fa-archive
-order: 3
+order: 4
+hidden: true
+permalink: /blog/archives/
 ---

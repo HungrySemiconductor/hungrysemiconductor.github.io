@@ -1,1 +1,5 @@
-该html为右侧tag添加了计数，显示带有该tag的文章总数
+- trending-tags.html
+> 为主页面右侧tag添加了计数，显示带有该tag的文章总数
+
+- siderbar.html
+> 修改导航栏，隐藏**archive、categories、tags**目录
