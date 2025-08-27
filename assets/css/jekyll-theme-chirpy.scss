@@ -1,0 +1,39 @@
+---
+---
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+/* append your custom style below */
+
+/* 设置全局和图片鼠标样式 */
+body {
+  cursor: url('/assets/img/MarioCursor/NormalSelect.cur'), auto;
+}
+
+/* 链接、按钮、图片鼠标样式 */
+a, button, .link, .btn, [type="button"], img {
+  cursor: url('/assets/img/MarioCursor/LinkSelect.cur'), pointer;
+}
+
+/* 忙碌状态鼠标样式 */
+.wait, .loading {
+  cursor: url('/assets/img/MarioCursor/HelpSelect.cur'), wait;
+}
+
+/* 禁止操作光标 */
+.not-allowed {
+  cursor: url('/assets/img/MarioCursor/Unavailable.cur'), not-allowed;
+}
+
+/* 文本框操作光标 */
+input, textarea, select {
+  cursor: url('/assets/img/MarioCursor/Handwriting.cur'), text;
+}
+
+
+
