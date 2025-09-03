@@ -3,3 +3,6 @@
 
 - siderbar.html
 > 修改导航栏，隐藏**archive、categories、tags**目录
+
+- footer.html
+> 页面底部添加网站运行时长
