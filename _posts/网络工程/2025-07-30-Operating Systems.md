@@ -335,25 +335,21 @@ comments: true
 - Windows
 
   > 安装软件时，会自动安装其依赖项
-
-  - MSI File， Microsoft installer package
-
-    > 是一种 Windows 安装程序文件，用于安装和配置软件。它包含了软件的安装程序、配置文件、组件和依赖项包括 DLL 等信息
-
-  - SXS，Side-by-Side，侧载
-    > 是一种 Windows 组件模型，它允许在同一台计算机上安装多个版本的相同软件组件（共享库），而不会相互干扰。存储位置为 C:\Windows\WinSxS
+  
+  - MSI File， Microsoft installer package:是一种 Windows 安装程序文件，用于安装和配置软件。它包含了软件的安装程序、配置文件、组件和依赖项包括 DLL 等信息
+  - SXS，Side-by-Side，侧载"是一种 Windows 组件模型，它允许在同一台计算机上安装多个版本的相同软件组件（共享库），而不会相互干扰。存储位置为 C:\Windows\WinSxS
 
 - Linux
-  > 安装独立包时，不会自动安装其依赖项，要么根据提示手动依次安装依赖项，要么使用包管理器
+  > 安装独立包时，不会自动安装其依赖项，要么根据提示**手动依次安装依赖项（使用dpkg时）**，要么**使用包管理器自动安装（使用apt时）**
 
 ### 3.2 包管理器
 - 包管理器
-  > Linux系统上用于自动安装、管理和删除软件包的工具，对于不同的Linux发行版，有不同的软件包管理器，如Debian使用的dpkg和APT(advanced package tool)、CentOS使用的rpm等
-
+  - Linux系统上用于自动安装、管理和删除软件包的工具，对于不同的Linux发行版，有不同的软件包管理器，如Debian使用的dpkg和APT(advanced package tool)、CentOS使用的rpm等
+  - Windows系统上自带PSGallery，但也可以使用第三方软件Chocolatey作为包管理器（更丰富），通过命令行进行软件包管理
 
 - 使用dpkg时，将在后台运行以下两个命令之一
-  > - dpkg-deb：提供有关.deb文件的信息，并且可以打包和解压缩其内容
-  > - dpkg-query：用于查询.deb文件信息的后端工具
+  - dpkg-deb：提供有关.deb文件的信息，并且可以打包和解压缩其内容
+  - dpkg-query：用于查询.deb文件信息的后端工具
 
 ```shell
 ====== Linux ======
@@ -363,23 +359,56 @@ comments: true
 - sudo dpkg --purge <packagename> # 卸载软件包，包括所有配置文件
 - sudo dpkg --list # 列出所有已安装的软件包
 - sudo dpkg --listfiles <packagename> # 列出软件包的所有文件
+- sudo apt update # 更新软件包（仅检查更新元数据，而不执行下载）
+- sudo apt upgrade # 运行新的软件包（执行更新软件包操作）
+====== Windows ======
+- Register-PackageSource -Name chocolatey -ProviderName Chocolatey -Location http://chocolatey.org/api/v2 # 将Chocolatey设置为软件包源，所有软件资源通过这个获取（不过Windows默认好像安装了这个）
+- Get-PackageSource # 查看包管理器
+- Find-Package -name <packagename> # 查找所有相关软件包源（从PSGallery和Chocolatey中）
+- Install-Package -name <packagename> -Source <PSGallery/Chocolatey># 从指定的源中安装软件包
+- Uninstall-Package -name <packagename> # 卸载软件包
 ```
-
-
-
-
-
-```
-
-
-
 
 ### 3.3 设备软件管理
 
-#### 3.3.1 设备和驱动程序
+#### 3.3.1 设备驱动程序
 
+- 驱动(driver)：用以硬件设备和操作系统交互 
+
+- 管理驱动：
+	- Windows：在cmd中使用 `devmgmt.msc` 打开设备管理器，`plug ang play(PnP)` 即插即用监视器，操作系统自动检测插入电脑的新的硬件设备，然后识别和安装相应的管理软件。类似键盘鼠标的外部设备接入后操作系统要求其插入 `devices hardware ID`，然后操作系统根据这个ID安装相应驱动
+	- Linux：在 `/dev` 目录下为插入的硬件设备，Linux中任何东西都被视作文件，使用 `ls -l` 查看文件信息时，`d`表示目录、`-`表示普通文件，`c`表示按字节读取的character devices（鼠标键盘）、`b`表示按块读取的block devices（USB驱动或硬盘驱动）
+- 更新驱动：
+	- Windows：右键点击驱动设备菜单栏
+	- Linux：设备驱动并不全部存储在 `/dev`目录下，有时部分存储在 `Linux Kernel(Linux内核)` 中，内核是真正的单体软件，内置许多硬件支持，当设备插入时会自动工作。部分未内置的设备可能是具有内核模块，可以像安装软件一样单独安装。（但**并非所有内核模块都是驱动程序**）
+
+```shell
+====== Linux ======
+- ls /dev # 列出/dev中所有设备
+- lcpci # 列出安装在PCI总线上的设备
+- lsusb # 列出安装在USB总线上的设备
+- lsscsi # 列出SCSI设备，例如硬盘驱动器
+- dmesg # 列出内核识别的设备
+
+====== Linux /dev =======
+- /dev/sda # 第一个SCSI驱动器
+- /dev/sr0 # 第一个光盘驱动器
+- /dev/usb # USB设备
+- /dev/usbhid # USB鼠标
+- /dev/usb/lp0 # USB打印机
+- /dev/null # 特殊文件，空设备，禁止输入输出，输出重定向时可以用于将数据彻底丢弃
+```
+	
 #### 3.3.2 操作系统更新
-
+- Windows10采用自动更新，`Security Patch(软件的一部分)` 用以修复安全漏洞
+- Linux使用 `uname -r` 查看内核版本，使用 `sudo apt update` 和 `sudo apt full-upgrade`重启后完成更新
+	> **Linux内核(kernel)是Linux操作系统的主要组件**，位于内存中，是硬件设备和其余进程之间的核心接口
+	- 内存管理：跟踪存储的内容和位置以及内存使用情况
+	- 进程管理：确定哪些进程可以使用和何时使用CPU，以及使用时长
+	- 设备驱动：充当硬件和进程之间的解释器
+	- 系统调用和安全：从进程接收服务请求
+	
+	
 ## 4 文件系统
 
 ## 5 过程管理
