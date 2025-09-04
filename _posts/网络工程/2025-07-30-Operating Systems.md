@@ -347,6 +347,32 @@ comments: true
   > 安装独立包时，不会自动安装其依赖项，要么根据提示手动依次安装依赖项，要么使用包管理器
 
 ### 3.2 包管理器
+- 包管理器
+  > Linux系统上用于自动安装、管理和删除软件包的工具，对于不同的Linux发行版，有不同的软件包管理器，如Debian使用的dpkg和APT(advanced package tool)、CentOS使用的rpm等
+
+
+- 使用dpkg时，将在后台运行以下两个命令之一
+  > - dpkg-deb：提供有关.deb文件的信息，并且可以打包和解压缩其内容
+  > - dpkg-query：用于查询.deb文件信息的后端工具
+
+```shell
+====== Linux ======
+- sudo dpkg --install <packagename> # 安装软件包
+- sudo dpkg --remove <packagename> # 删除软件包
+- sudo dpkg --update-avail <packagename> # 更新本地软件包
+- sudo dpkg --purge <packagename> # 卸载软件包，包括所有配置文件
+- sudo dpkg --list # 列出所有已安装的软件包
+- sudo dpkg --listfiles <packagename> # 列出软件包的所有文件
+```
+
+
+
+
+
+```
+
+
+
 
 ### 3.3 设备软件管理
 

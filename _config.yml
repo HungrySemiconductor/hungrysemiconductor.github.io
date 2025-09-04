@@ -75,7 +75,8 @@ analytics:
 
 # Page views settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  # now only supports 'goatcounter'
+  provider: 
 
 # Prefer color scheme setting.
 #
