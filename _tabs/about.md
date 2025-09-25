@@ -13,7 +13,7 @@ $ whoami
 Hongle_Fan		# I also use names Hungry_Semiconductor | Hungry_Pi online
 
 $ echo $LOCATION
-Beijing, China		# 40.4042°N, 116.6074°E
+Beijing, China		# 39°54'31.49'' N, 116°15'2.15'' E
 
 $ cat /proc/$(whoami)/education
     Status:  Postgraduate Student
@@ -40,7 +40,7 @@ $ cat ~/Hobbies.txt
 
 $ website --version
 Version: 1.0		# Thanks to Chirpy Theme provided by cotes2020
-Last Update: Jul 2025	# Still growing
+Last Update: Sep 2025	# Still growing
 
 ```
 
