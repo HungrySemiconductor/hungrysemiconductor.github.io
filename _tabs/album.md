@@ -127,4 +127,8 @@ order: 6
     <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251004%20(8).webp" alt="photo">
     <div class="album-caption">万寿寺-北京艺术博物馆</div>
   </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(12).webp" alt="photo">
+    <div class="album-caption">西湖-集贤亭</div>
+  </div>
 </div>
