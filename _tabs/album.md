@@ -131,4 +131,44 @@ order: 6
     <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(12).webp" alt="photo">
     <div class="album-caption">西湖-集贤亭</div>
   </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(1).webp" alt="photo">
+    <div class="album-caption">西湖-三潭映月</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(8).webp" alt="photo">
+    <div class="album-caption">西湖-御碑亭侧小湖</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(10).webp" alt="photo">
+    <div class="album-caption">西湖-雷峰塔</div>
+  </div> 
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(6).webp" alt="photo">
+    <div class="album-caption">杭州-小河直街</div>
+  </div> 
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(3).webp" alt="photo">
+    <div class="album-caption">杭州-拱宸桥边小店</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(2).webp" alt="photo">
+    <div class="album-caption">杭州-拱宸桥边花簇</div>
+  </div>   
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(13).webp" alt="photo">
+    <div class="album-caption">杭州-钱塘江</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(4).webp" alt="photo">
+    <div class="album-caption">萧山国际机场</div>
+  </div>   
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(5).webp" alt="photo">
+    <div class="album-caption">良渚博物馆-神人兽面纹玉琮</div>
+  </div>   
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(9).webp" alt="photo">
+    <div class="album-caption">杭航校景</div>
+  </div>
 </div>
