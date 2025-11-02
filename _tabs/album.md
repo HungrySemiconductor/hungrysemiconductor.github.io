@@ -171,4 +171,28 @@ order: 6
     <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251024%20(9).webp" alt="photo">
     <div class="album-caption">杭航校景</div>
   </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251101%20(1).webp" alt="photo">
+    <div class="album-caption">国家天文台兴隆观测基地-北脊</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251101%20(2).webp" alt="photo">
+    <div class="album-caption">河北兴隆-山上秋景</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251101%20(5).webp" alt="photo">
+    <div class="album-caption">国家天文台-郭守敬望远镜LAMOST</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251101%20(4).webp" alt="photo">
+    <div class="album-caption">国家天文台-2.16米天文望远镜</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251102%20(2).webp" alt="photo">
+    <div class="album-caption">怀柔-"两弹一星"纪念馆</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251102%20(1).webp" alt="photo">
+    <div class="album-caption">UCAS-雁栖湖图书馆前柿子树</div>
+  </div>
 </div>
