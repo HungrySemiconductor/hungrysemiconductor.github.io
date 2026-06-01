@@ -10,7 +10,7 @@ order: 7
 
 ```console
 $ whoami
-Hongle_Fan		# I also use names Hungry_Semiconductor | Hungry_Pi online
+Hongle_Fan		# I also use names Hungry_Semiconductor | Hungry_Pi | Ephina
 
 $ echo $LOCATION
 Beijing, China		# 39°54'31.49'' N, 116°15'2.15'' E
