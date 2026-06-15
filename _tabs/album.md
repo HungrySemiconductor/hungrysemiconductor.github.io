@@ -195,4 +195,28 @@ order: 6
     <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20251102%20(1).webp" alt="photo">
     <div class="album-caption">UCAS-雁栖湖图书馆前柿子树</div>
   </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20260504.webp" alt="photo">
+    <div class="album-caption">UCAS-玉泉路图书馆花簇阶梯</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20260608.webp" alt="photo">
+    <div class="album-caption">UCAS-玉泉路图书馆一瞥</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20260531.webp" alt="photo">
+    <div class="album-caption">石景山-冬奥首钢大跳台</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20260405.webp" alt="photo">
+    <div class="album-caption">湖北武汉-黄鹤楼</div>
+  </div>
+  <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20260405%20(2).webp" alt="photo">
+    <div class="album-caption">湖北武汉-长江大桥</div>
+  </div>
+    <div class="album-item">
+    <img src="https://cdn.jsdelivr.net/gh/HungrySemiconductor/Pic@update/20260405%20(3).webp" alt="photo">
+    <div class="album-caption">湖北省博物馆-越王勾践剑</div>
+  </div>
 </div>
